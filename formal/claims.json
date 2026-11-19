@@ -439,6 +439,58 @@
       }
     },
     {
+      "id": "R06_c4",
+      "sentence": "R06",
+      "claim": "モデルに入れた訓練データ（説明変数と目的変数）の SHA-256 は 7968ccfdb6b347591a4a86e80dc98088c8d74ccc118ef1c80694e02748c425e2 である",
+      "completion": {
+        "completer": "agent",
+        "sentence": "出力に記録された，モデルに入れた訓練データの SHA-256 は 7968ccfdb6b347591a4a86e80dc98088c8d74ccc118ef1c80694e02748c425e2 である",
+        "definitions": [
+          {
+            "term": "本文に値が無い claims",
+            "meaning": "他の研究が同じデータかを照合できるように，値を述べる"
+          },
+          {
+            "term": "訓練データの SHA-256",
+            "meaning": "文字列"
+          }
+        ]
+      },
+      "formalization": {
+        "formalizer": "agent",
+        "proposition_name": "R06_c4",
+        "arguments": [
+          "trainDataSha256"
+        ]
+      }
+    },
+    {
+      "id": "R06_c5",
+      "sentence": "R06",
+      "claim": "テストデータ（説明変数と目的変数）の SHA-256 は cb0d6b45a5531af0e7818c582c9f92b56ad466c787539acfbeef143da4349091 である",
+      "completion": {
+        "completer": "agent",
+        "sentence": "出力に記録された，テストデータの SHA-256 は cb0d6b45a5531af0e7818c582c9f92b56ad466c787539acfbeef143da4349091 である",
+        "definitions": [
+          {
+            "term": "本文に値が無い claims",
+            "meaning": "他の研究が同じデータかを照合できるように，値を述べる"
+          },
+          {
+            "term": "テストデータの SHA-256",
+            "meaning": "文字列"
+          }
+        ]
+      },
+      "formalization": {
+        "formalizer": "agent",
+        "proposition_name": "R06_c5",
+        "arguments": [
+          "testDataSha256"
+        ]
+      }
+    },
+    {
       "id": "R07_c1",
       "sentence": "R07",
       "claim": "テストデータの割合は 20% とした",
@@ -1568,6 +1620,18 @@
       "args": {
         "declared_variable": "testR2UpperBound"
       }
+    },
+    "trainDataSha256": {
+      "type": "String",
+      "meaning": "モデルに入れた訓練データ（説明変数と目的変数）の SHA-256",
+      "verifier": "GitHub",
+      "query": "experiment_output"
+    },
+    "testDataSha256": {
+      "type": "String",
+      "meaning": "テストデータ（説明変数と目的変数）の SHA-256",
+      "verifier": "GitHub",
+      "query": "experiment_output"
     }
   },
   "axioms": [

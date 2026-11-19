@@ -47,6 +47,10 @@ abbrev R06_c2 (trainIndex testIndex : List ℕ) (nSamples : ℕ) : Prop :=
 abbrev R06_c3 (shuffleSplit : ℕ → List ℕ × List ℕ) (trainIndex testIndex : List ℕ) (splitSeed : ℕ) : Prop :=
   (trainIndex, testIndex) = shuffleSplit splitSeed
 
+/-- 本文に値が無い claims。他の研究が同じデータかを照合するための値。 -/
+abbrev R06_c4 (trainDataSha256 : String) : Prop := trainDataSha256 = "7968ccfdb6b347591a4a86e80dc98088c8d74ccc118ef1c80694e02748c425e2"
+abbrev R06_c5 (testDataSha256 : String) : Prop := testDataSha256 = "cb0d6b45a5531af0e7818c582c9f92b56ad466c787539acfbeef143da4349091"
+
 /-! ## R07 -/
 abbrev R07_c1 (nTest nSamples : ℕ) : Prop := (nTest : ℤ) = ⌈(0.2 : ℚ) * nSamples⌉
 abbrev R07_c2 (splitSeed : ℕ) : Prop := splitSeed = 0
